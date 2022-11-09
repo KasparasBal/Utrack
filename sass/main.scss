@@ -1,0 +1,16 @@
+//ABSTRACTS
+@import "abstracts/mixins";
+@import "abstracts/variables";
+//BASE
+@import "base/typography";
+@import "base/animations";
+@import "base/base";
+
+//COMPONENTS
+@import "components/nav";
+@import "components/sidebar";
+@import "components/activity_box";
+//LAYOUT
+@import "layout/header";
+//PAGES
+@import "pages/home";

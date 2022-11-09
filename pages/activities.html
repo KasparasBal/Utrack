@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="../js/main.js"></script>
+    <link rel="icon" href="/img/UTrack_logo.png" />
+    <link rel="stylesheet" href="../css/output.css" />
+    <title>UTrack</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__logo">UTrack</div>
+      <nav class="nav__links">
+        <a href="/index.html" class="nav__link">Home</a>
+        <a href="#" class="nav__link">Activities</a>
+        <a href="#" class="nav__link">Profile</a>
+        <a href="#" class="nav__link">Options</a>
+      </nav>
+    </nav>
+    <main>
+      <section class="sidebar">
+        <div class="sidebar__btn sidebar__btn--open">
+          <img src="/img/menu.svg" alt="menu open icon" class="sidebar__icon" />
+          Workouts
+        </div>
+        <div class="sidebar__content hidden-sidebar">
+          <div class="sidebar__btn sidebar__btn--close">
+            <img
+              src="/img/close.svg"
+              alt="menu close icon"
+              class="sidebar__icon"
+            />
+          </div>
+          <ul class="activities">
+            <li class="activity">
+              <div class="activity__logo">
+                <img
+                  src="/img/barbell.svg"
+                  alt="activity logo"
+                  class="activity__logo"
+                />
+              </div>
+              <aside class="activity__aside">
+                <div class="activity__title">Barbell Lifts</div>
+                <div class="activity__reps">Reps: 12x</div>
+                <div class="activity__sets">
+                  <h4 class="activity__sets-text">x3</h4>
+                </div>
+                <div class="activity__meter"></div>
+              </aside>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+.sidebar {
+  &__content {
+    position: relative;
+    z-index: 2;
+    background-color: $color-secondary-light;
+    height: 92vh;
+    width: 40vh;
+
+    transition: all 0.3s ease-in-out;
+  }
+  &__icon {
+    width: 3rem;
+  }
+  &__btn {
+    cursor: pointer;
+
+    &--open {
+      position: absolute;
+      z-index: 1;
+      top: 10rem;
+      left: 0.2rem;
+      color: $color-primary;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &--close {
+      color: $color-primary;
+      position: absolute;
+      right: 0.5rem;
+      top: 0.5rem;
+    }
+  }
+}
+
+.hidden-sidebar {
+  visibility: hidden;
+  transform: translateX(-30rem);
+}

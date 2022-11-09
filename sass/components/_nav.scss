@@ -1,0 +1,46 @@
+.nav {
+  background-image: linear-gradient(
+    to bottom,
+    $color-primary 40%,
+    rgba($color-primary, 0.8)
+  );
+  color: $text-light;
+
+  height: 8vh;
+  padding: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  &__links {
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $text-light;
+    padding: 0.2rem;
+
+    border: 3px solid transparent;
+
+    transition: all 0.2s ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      background-color: $color-primary-dark;
+      color: $text-light;
+      transform: skewY(-5deg);
+    }
+  }
+}
