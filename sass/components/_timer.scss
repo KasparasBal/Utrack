@@ -1,0 +1,13 @@
+.display__timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0.5rem solid $color-primary;
+  border-radius: 100rem;
+  width: 40rem;
+  height: 40rem;
+
+  font-size: 10rem;
+  @include gradientText;
+}

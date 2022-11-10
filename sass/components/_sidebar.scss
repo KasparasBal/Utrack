@@ -2,7 +2,7 @@
   &__content {
     position: relative;
     z-index: 2;
-    background-color: $color-secondary-light;
+    background-color: $color-secondary-light-1;
     height: 92vh;
     width: 40vh;
 
@@ -11,14 +11,25 @@
   &__icon {
     width: 3rem;
   }
+  &__buttons {
+    position: absolute;
+    z-index: 1;
+    top: 10rem;
+    right: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    background-color: rgba(#fff, 0.6);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+  }
   &__btn {
     cursor: pointer;
 
     &--open {
-      position: absolute;
-      z-index: 1;
-      top: 10rem;
-      left: 0.2rem;
       color: $color-primary;
       text-transform: uppercase;
       font-size: 1.8rem;
@@ -38,5 +49,5 @@
 
 .hidden-sidebar {
   visibility: hidden;
-  transform: translateX(-30rem);
+  transform: translateX(-35rem);
 }

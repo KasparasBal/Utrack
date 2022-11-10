@@ -1,0 +1,109 @@
+.activities {
+  &__body {
+    display: grid;
+    grid-template-columns: 100vh;
+    grid-template-rows: 8vh, 92vh;
+  }
+
+  &__nav {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+
+  &__main {
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+
+  &__sidebar {
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+  &__title {
+    text-transform: uppercase;
+    padding: 1rem;
+    color: $color-primary-dark;
+  }
+}
+.section__display {
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .display {
+    &__title {
+      font-size: 5rem;
+      font-weight: 900;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+      padding: 2rem;
+
+      @include gradientText;
+    }
+    &__buttons {
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    &__stats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    &__reps,
+    &__sets {
+      font-size: 3rem;
+      text-transform: uppercase;
+      @include gradientText;
+    }
+
+    &__btn {
+      transition: all 0.2s ease;
+
+      cursor: pointer;
+
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: $color-primary;
+
+      border: 3px solid $color-primary;
+      border-radius: 0.5rem;
+      padding: 1rem;
+
+      &:hover {
+        background-color: $color-primary;
+        color: #fff;
+      }
+
+      &--start {
+      }
+      &--stop {
+      }
+      &--pause {
+      }
+      &--add {
+      }
+      *--end {
+      }
+    }
+  }
+}
+.seperator {
+  font-size: 3rem;
+  @include gradientText;
+}
