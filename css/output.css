@@ -103,6 +103,10 @@ body {
   border: 1px solid #c92a2a !important;
 }
 
+#map {
+  height: 90vh;
+}
+
 .nav {
   background-image: linear-gradient(to bottom, #82c91e 40%, rgba(130, 201, 30, 0.8));
   color: #f8f9fa;
