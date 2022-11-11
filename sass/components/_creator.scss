@@ -71,6 +71,7 @@
 
     border-radius: 0.5rem 0.5rem 0 0;
   }
+
   &__icons {
     background-color: $color-secondary-light-1;
     width: 95%;
@@ -139,4 +140,7 @@
     color: $text-dark;
     font-size: 2rem;
   }
+}
+.hidden__creator {
+  visibility: hidden;
 }

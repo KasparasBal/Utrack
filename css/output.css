@@ -367,6 +367,10 @@ body {
   font-size: 2rem;
 }
 
+.hidden__creator {
+  visibility: hidden;
+}
+
 .header {
   position: relative;
   height: 80vh;
