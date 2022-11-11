@@ -15,7 +15,7 @@
       <nav class="nav__links">
         <a href="/index.html" class="nav__link">Home</a>
         <a href="/pages/activities.html" class="nav__link">Activities</a>
-        <a href="#" class="nav__link">Profile</a>
+        <a href="#" class="nav__link">Travels</a>
         <a href="#" class="nav__link">Options</a>
       </nav>
     </nav>
@@ -38,42 +38,10 @@
         </div>
         <ul class="activities">
           <h2 class="activities__title">Your Activities:</h2>
-          <li class="activity">
-            <div class="activity__logo">
-              <img
-                src="/img/barbell.svg"
-                alt="activity logo"
-                class="activity__logo"
-              />
-            </div>
-            <aside class="activity__aside">
-              <div class="activity__title">Barbell Lifts</div>
-              <div class="activity__reps">Reps: 12x</div>
-              <div class="activity__sets">
-                <h4 class="activity__sets-text">x3</h4>
-              </div>
-              <div class="activity__meter"></div>
-            </aside>
-          </li>
         </ul>
       </div>
     </aside>
     <main class="activities__main">
-      <section class="section__display">
-        <div class="display__title">Barbell Press</div>
-        <div class="display__timer">5:00</div>
-        <div class="display__buttons">
-          <div class="display__btn display__btn--start">Start</div>
-          <div class="display__btn display__btn--skip">Skip</div>
-          <div class="display__btn display__btn--add">+5 min</div>
-          <div class="display__btn display__btn--end">End</div>
-        </div>
-        <div class="display__stats">
-          <div class="display__reps">Reps: 0/12</div>
-          <p class="seperator">|</p>
-          <div class="display__sets">Sets: 0/3</div>
-        </div>
-      </section>
       <section class="section__creator hidden__creator">
         <h2 class="creator__title">Add your new activity:</h2>
         <div class="creator">
@@ -86,31 +54,56 @@
           </button>
 
           <div class="creator__icons"></div>
-          <div class="creator__form">
+          <form class="creator__form">
             <div class="creator__field creator__field-title">
               <label class="creator__label" for="title">Activity title</label>
-              <input class="creator__input" type="text" name="title" />
+              <input
+                class="creator__input"
+                type="text"
+                name="title"
+                id="actTitle"
+              />
             </div>
             <div class="creator__field creator__field-repTime">
               <label class="creator__label" for="repTime">Rep Time (Min)</label>
-              <input class="creator__input" type="text" name="repTime" />
+              <input
+                class="creator__input"
+                type="text"
+                name="repTime"
+                id="actRepTime"
+              />
             </div>
             <div class="creator__field creator__field-breakTime">
               <label class="creator__label" for="breakTime"
                 >Break Time (Min)</label
               >
-              <input class="creator__input" type="text" name="breakTime" />
+              <input
+                class="creator__input"
+                type="text"
+                name="breakTime"
+                id="actBreakTime"
+              />
             </div>
             <div class="creator__field creator__field-reps">
               <label class="creator__label" for="reps">Reps</label>
-              <input class="creator__input" type="text" name="reps" />
+              <input
+                class="creator__input"
+                type="text"
+                name="reps"
+                id="actReps"
+              />
             </div>
             <div class="creator__field creator__field-sets">
               <label class="creator__label" for="sets">Sets</label>
-              <input class="creator__input" type="text" name="sets" />
+              <input
+                class="creator__input"
+                type="text"
+                name="sets"
+                id="actSets"
+              />
             </div>
             <button class="creator__btn-submit">Create New Activity</button>
-          </div>
+          </form>
         </div>
       </section>
     </main>

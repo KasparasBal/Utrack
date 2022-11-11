@@ -9,3 +9,8 @@
 .main {
   position: relative;
 }
+
+.wrongInput {
+  animation: wrongInput 0.3s ease;
+  border: 1px solid $color-red !important;
+}

@@ -7,8 +7,10 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 0 1rem 2rem rgba(#000, 0.2);
   padding: 2rem;
+  margin: 2rem;
   width: 90%;
   height: 15%;
+  cursor: pointer;
 
   display: grid;
   grid-template-columns: 20%, 80%;
