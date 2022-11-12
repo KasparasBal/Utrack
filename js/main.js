@@ -21,10 +21,7 @@ const actSets = document.getElementById("actSets");
 const actReps = document.getElementById("actReps");
 
 //Activities Display
-const currActTitle = document.querySelector(".display__title");
-const currActTimer = document.querySelector(".display__timer");
-const currActReps = document.querySelector(".display__reps");
-const currActSets = document.querySelector(".display__sets");
+
 const activMain = document.querySelector(".activities__main");
 
 //Sidebar
@@ -81,7 +78,7 @@ class App {
       "click",
       this._displayCurrentActivity.bind(this)
     );
-    if (this.#activities.length === 0) this._displayNoActivities();
+    this._getLocalStorage();
   }
   //Validate Inputs
   _validateInputs(...inputs) {
@@ -117,7 +114,9 @@ class App {
       this.#activities.push(activity);
       this._displayActivities(activity);
       this._clearForm();
+      this._displayNoActivities();
       this._LastActivity(activity);
+      this._setLocalStorage();
     }
   }
   _LastActivity(activity) {
@@ -153,8 +152,11 @@ class App {
 
   //Display that no activities are present
   _displayNoActivities() {
-    let html = "Currently you have no activities created.";
-    activitiesTitle.insertAdjacentHTML("afterend", html);
+    if (this.#activities.length === 0) {
+      let html =
+        "<h3 class='activities__none'>Currently you have no activities created.</h3>";
+      activitiesTitle.insertAdjacentHTML("afterend", html);
+    }
   }
 
   //Display Activities
@@ -184,17 +186,37 @@ class App {
 
   //Display Current Activity
   _displayCurrentActivity(e) {
+    const currActTitle = document.querySelector(".display__title");
+    const currActTimer = document.querySelector(".display__timer");
+    const currActReps = document.querySelector(".display__reps");
+    const currActSets = document.querySelector(".display__sets");
     //find clicked activity in the activities array.
     const activity = e.target;
     const currAct = this.#activities.find((act) => {
-      act.id === activity.closest(".activity").dataset.id;
+      return act.id === activity.closest(".activity").dataset.id;
     });
     //if not found
+    console.log(currAct);
     if (!currAct) return;
     //if found
+    console.log(currActTitle);
+    console.log(currActReps);
+    console.log(currActSets);
     currActTitle.textContent = currAct.title;
     currActReps.textContent = currAct.reps;
     currActSets.textContent = currAct.sets;
+  }
+
+  _setLocalStorage() {
+    localStorage.setItem("activities", JSON.stringify(this.#activities));
+  }
+  _getLocalStorage() {
+    const data = JSON.parse(localStorage.getItem("activities"));
+    console.log(data);
+    if (!data) return;
+    this.#activities = data;
+    this._LastActivity(this.#activities[this.#activities.length - 1]);
+    data.forEach((activity) => this._displayActivities(activity));
   }
 
   //Getters
