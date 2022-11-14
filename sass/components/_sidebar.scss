@@ -1,5 +1,6 @@
 .sidebar {
   &__content {
+    overflow-y: scroll;
     position: relative;
     z-index: 2;
     background-color: $color-secondary-light-1;
@@ -39,10 +40,10 @@
       align-items: center;
     }
     &--close {
-      color: $color-primary;
       position: absolute;
-      right: 0.5rem;
-      top: 0.5rem;
+      right: 1.5rem;
+      top: 1.5rem;
+      color: $color-primary;
     }
   }
 }

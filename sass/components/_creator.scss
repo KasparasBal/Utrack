@@ -27,6 +27,7 @@
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 12rem 1fr 1fr;
 
   &__btn-close {
     width: 3rem;
@@ -39,7 +40,7 @@
 
     cursor: pointer;
   }
-  &__icon {
+  &__icon-close {
     width: 3rem;
     height: 3rem;
   }
@@ -79,10 +80,31 @@
     width: 95%;
     height: 95%;
     grid-column: 1/2;
-    grid-row: 1/3;
+    grid-row: 1/4;
     align-self: center;
     justify-self: center;
     border-radius: 1rem;
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  &__icon {
+    transition: all 0.2s;
+    cursor: pointer;
+    width: 7rem;
+    height: 7rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(#fff, 0.2);
+    &:hover {
+      background-color: rgba(#fff, 0.5);
+      transform: scale(110%);
+    }
+  }
+  &__icon-img {
+    width: 100%;
+    height: 100%;
   }
   &__field {
     display: flex;
@@ -113,7 +135,7 @@
   }
   &__form {
     grid-column: 2/3;
-    grid-row: 1/3;
+    grid-row: 2/4;
     gap: 4rem;
 
     padding: 2rem;
@@ -142,6 +164,27 @@
     color: $text-dark;
     font-size: 2rem;
   }
+}
+.example__activity {
+  align-self: center;
+  justify-self: center;
+  margin-top: 8rem;
+  margin-left: 5rem;
+  height: 80%;
+  width: 80%;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  transform: translateY(6rem);
+  opacity: 0;
+  transition: all 0.3s ease;
+
+  &-logo {
+    justify-self: start;
+  }
+}
+.example__activity-visible {
+  transform: translateY(0rem);
+  opacity: 1;
 }
 .hidden__creator {
   visibility: hidden;

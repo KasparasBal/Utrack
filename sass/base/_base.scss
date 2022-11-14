@@ -20,3 +20,18 @@
 #map {
   height: 90vh;
 }
+
+//ScrollBar
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-primary-dark;
+  border-radius: 10px;
+}

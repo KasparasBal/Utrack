@@ -42,6 +42,7 @@
       </div>
     </aside>
     <main class="activities__main">
+      <section class="section__display"></section>
       <section class="section__creator hidden__creator">
         <h2 class="creator__title">Add your new activity:</h2>
         <div class="creator">
@@ -49,15 +50,106 @@
             <img
               src="/img/close.svg"
               alt="menu close icon"
-              class="creator__icon"
+              class="creator__icon-close"
             />
           </button>
 
-          <div class="creator__icons"></div>
+          <div class="creator__icons">
+            <div class="creator__icon" data-logo="1">
+              <img
+                data-logo="6"
+                data-input="example_logo"
+                class="creator__icon-img"
+                src="/img/creatorIcon-1.svg"
+                alt="sports logo"
+              />
+            </div>
+            <div class="creator__icon" data-logo="2">
+              <img
+                data-logo="6"
+                data-input="example_logo"
+                class="creator__icon-img"
+                src="/img/creatorIcon-2.svg"
+                alt="sports logo"
+              />
+            </div>
+            <div class="creator__icon" data-logo="3">
+              <img
+                data-logo="6"
+                data-input="example_logo"
+                class="creator__icon-img"
+                src="/img/creatorIcon-3.svg"
+                alt="sports logo"
+              />
+            </div>
+            <div class="creator__icon" data-logo="4">
+              <img
+                data-logo="6"
+                data-input="example_logo"
+                class="creator__icon-img"
+                src="/img/creatorIcon-4.svg"
+                alt="sports logo"
+              />
+            </div>
+            <div class="creator__icon" data-logo="5">
+              <img
+                data-logo="6"
+                data-input="example_logo"
+                class="creator__icon-img"
+                src="/img/creatorIcon-5.svg"
+                alt="sports logo"
+              />
+            </div>
+            <div class="creator__icon" data-logo="6">
+              <img
+                data-logo="6"
+                data-input="example_logo"
+                class="creator__icon-img"
+                src="/img/creatorIcon-6.svg"
+                alt="sports logo"
+              />
+            </div>
+          </div>
+          <div class="creator__example-activity">
+            <div class="activity example__activity">
+              <div class="activity__logo example__activity-logo">
+                <img
+                  data-input="example_logo"
+                  class="creator__icon-img example__activity-icon"
+                  src="/img/creatorIcon-0.svg"
+                  alt="sports logo"
+                />
+              </div>
+              <aside class="activity__aside">
+                <div
+                  class="activity__title example__activity-title"
+                  data-input="example_title"
+                >
+                  &nbsp;
+                </div>
+                <div
+                  class="activity__reps example__activity-reps"
+                  data-input="example_reps"
+                >
+                  &nbsp;
+                </div>
+                <div class="activity__sets">
+                  <h4
+                    class="activity__sets-text example__activity-sets"
+                    data-input="example_sets"
+                  >
+                    &nbsp;
+                  </h4>
+                </div>
+                <div class="activity__meter"></div>
+              </aside>
+            </div>
+          </div>
           <form class="creator__form">
             <div class="creator__field creator__field-title">
               <label class="creator__label" for="title">Activity title</label>
               <input
+                data-input="example_title"
                 class="creator__input"
                 type="text"
                 name="title"
@@ -87,6 +179,7 @@
             <div class="creator__field creator__field-reps">
               <label class="creator__label" for="reps">Reps</label>
               <input
+                data-input="example_reps"
                 class="creator__input"
                 type="text"
                 name="reps"
@@ -97,6 +190,7 @@
               <label class="creator__label" for="sets">Sets</label>
               <input
                 class="creator__input"
+                data-input="example_sets"
                 type="text"
                 name="sets"
                 id="actSets"
